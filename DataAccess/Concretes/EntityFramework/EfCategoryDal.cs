@@ -12,9 +12,9 @@ using DataAccess.Contexts;
 
 namespace DataAccess.Concretes.EntityFramework;
 
-public class EfCategoryDal : EfRepositoryBase<Category,int,NorthwindContext>,ICategoryDal
+public class EfCategoryDal : EfRepositoryBase<Category,int,TobetoContext>,ICategoryDal
 {
-    public EfCategoryDal(NorthwindContext context) : base(context)
+    public EfCategoryDal(TobetoContext context) : base(context)
     {
     }
 }

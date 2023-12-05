@@ -30,5 +30,6 @@ namespace WebAPI.Controllers
             var result = await _categoryService.GetListAsync();
             return Ok(result);
         }
+        
     }
 }

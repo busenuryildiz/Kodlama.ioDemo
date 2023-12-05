@@ -18,8 +18,9 @@ namespace DataAccess
     {
         public static IServiceCollection AddDataAccessServices(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDbContext<NorthwindContext>(options => options.UseInMemoryDatabase("nArchitecture"));
-            //services.AddDbContext<BaseDbContext>(options => options.UseSq lServer(configuration.GetConnectionString("RentACar")));
+            services.AddDbContext<TobetoContext>(options => options.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=TobetoCourseAcademyDb;Trusted_Connection=true"));
+           // services.AddDbContext<NorthwindContext>(options => options.UseInMemoryDatabase("nArchitecture"));
+            //services.AddDbContext<BaseDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("RentACar")));
             services.AddScoped<ICourseDal, EfCourseDal>();
             services.AddScoped<ICategoryDal, EfCategoryDal>();
             return services;

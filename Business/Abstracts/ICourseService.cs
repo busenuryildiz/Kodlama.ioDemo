@@ -1,5 +1,6 @@
 ﻿using Core.DataAccess.Paging;
 using Entities.Concretes;
+using Entities.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,7 @@ namespace Business.Abstracts
         // public IList<Course> GetAll();
         Task<IPaginate<Course>> GetListAsync();
         Task Add(Course course);
+        Task<IPaginate<CourseDetailDto>> GetDetailsListAsync();
 
     }
 }

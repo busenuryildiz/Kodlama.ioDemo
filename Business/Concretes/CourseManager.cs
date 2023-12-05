@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DataAccess.Abstracts;
+using Entities.DTO;
 
 namespace Business.Concretes
 {
@@ -26,6 +27,13 @@ namespace Business.Concretes
             await _courseDal.AddAsync(course);
 
         }
+
+        public async Task<IPaginate<CourseDetailDto>> GetDetailsListAsync()
+        {
+            return await _courseDal.GetCourseDetails();
+        }
+
+
 
         //public IList<Course> GetAll()
         //{

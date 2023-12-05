@@ -1,5 +1,5 @@
-﻿using Business.Concretes;
-
+﻿//using Business.Concretes;
+Console.WriteLine("howyoudoin");
 //CategoryManager categoryManager = new CategoryManager();
 //foreach (var category in categoryManager.GetAll())
 //{
