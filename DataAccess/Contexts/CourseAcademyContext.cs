@@ -10,14 +10,17 @@ using Microsoft.Extensions.Configuration;
 
 namespace DataAccess.Contexts;
 
-public class TobetoContext : DbContext
+public class CourseAcademyContext : DbContext
 {
     protected IConfiguration Configuration { get; set; }
-
     public DbSet<Category> Categories { get; set; }
     public DbSet<Course> Courses { get; set; }
-    public TobetoContext(DbContextOptions<TobetoContext>options, IConfiguration configuration) : base(options)
-    { Configuration = configuration; Database.EnsureCreated(); }
+    public DbSet<User> Users { get; set; }
+    public CourseAcademyContext(DbContextOptions dbContextOptions, IConfiguration configuration) : base(dbContextOptions)
+    { 
+        Configuration = configuration; 
+        Database.EnsureCreated();
+    }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

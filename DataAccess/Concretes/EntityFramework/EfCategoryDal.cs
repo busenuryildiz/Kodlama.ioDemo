@@ -9,12 +9,15 @@ using System.Text;
 using System.Threading.Tasks;
 using Core.DataAccess.Repositories;
 using DataAccess.Contexts;
+using Microsoft.EntityFrameworkCore;
 
 namespace DataAccess.Concretes.EntityFramework;
 
-public class EfCategoryDal : EfRepositoryBase<Category,int,TobetoContext>,ICategoryDal
+public class EfCategoryDal : EfRepositoryBase<Category,Guid,CourseAcademyContext>,ICategoryDal
 {
-    public EfCategoryDal(TobetoContext context) : base(context)
+    private CourseAcademyContext _context;
+    public EfCategoryDal(CourseAcademyContext context) : base(context)
     {
+        _context = context;
     }
 }
