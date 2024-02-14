@@ -1,6 +1,5 @@
 ﻿using Business.Abstracts;
 using Core.DataAccess.Paging;
-using DataAccess.Concretes.EntityFramework;
 using Entities.Concretes;
 using System;
 using System.Collections.Generic;
@@ -9,10 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
 using Business.Constants;
-using Business.Dtos.Requests;
 using DataAccess.Abstracts;
-using Business.Dtos.Responses;
 using Core.Utilities.Results;
+using Business.Dtos.Requests.Categories;
+using Business.Dtos.Responses.Categories;
 
 namespace Business.Concretes;
 
@@ -56,7 +55,7 @@ public class CategoryManager : ICategoryService
         return new SuccessResult(Messages.CategoryDeleted);
     }
 
-    public async Task<CreatedCategoryResponse> GetAsync(Guid id)
+    public async Task<CreatedCategoryResponse> GetAsync(int id)
     {
         var getCategory = await _categoryDal.GetAsync(g => g.Id == id);
         var mappedCategory = _mapper.Map<CreatedCategoryResponse>(getCategory);

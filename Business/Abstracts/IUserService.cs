@@ -1,5 +1,4 @@
 ﻿using Business.Dtos.Requests;
-using Business.Dtos.Responses;
 using Core.DataAccess.Paging;
 using Entities.Concretes;
 using System;
@@ -8,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Core.Utilities.Results;
+using Business.Dtos.Responses.Users;
+using Business.Dtos.Requests.Users;
 
 namespace Business.Abstracts
 {

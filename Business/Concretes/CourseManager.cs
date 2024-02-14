@@ -1,6 +1,5 @@
 ﻿using Business.Abstracts;
 using Core.DataAccess.Paging;
-using DataAccess.Concretes.EntityFramework;
 using Entities.Concretes;
 using System;
 using System.Collections.Generic;
@@ -10,9 +9,9 @@ using System.Threading.Tasks;
 using DataAccess.Abstracts;
 using AutoMapper;
 using Business.Constants;
-using Business.Dtos.Requests;
-using Business.Dtos.Responses;
 using Core.Utilities.Results;
+using Business.Dtos.Requests.Courses;
+using Business.Dtos.Responses.Courses;
 
 namespace Business.Concretes
 {
@@ -43,7 +42,7 @@ namespace Business.Concretes
             return new SuccessResult(Messages.CourseDeleted);
         }
 
-        public async Task<CreatedCourseResponse> GetAsync(Guid id)
+        public async Task<CreatedCourseResponse> GetAsync(int id)
         {
             var getCourse = await _courseDal.GetAsync(g => g.Id == id);
             var mappedCourse = _mapper.Map<CreatedCourseResponse>(getCourse);

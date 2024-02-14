@@ -1,7 +1,6 @@
 ﻿using Business.Abstracts;
-using Business.Dtos.Requests;
+using Business.Dtos.Requests.Users;
 using Entities.Concretes;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebAPI.Controllers

@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Business.Dtos.Requests;
-using Business.Dtos.Responses;
 using Core.Utilities.Results;
+using Business.Dtos.Responses.Courses;
+using Business.Dtos.Requests.Courses;
 
 namespace Business.Abstracts
 {
@@ -16,7 +16,7 @@ namespace Business.Abstracts
         Task<IPaginate<GetListCourseResponse>> GetListAsync();
         Task<CreatedCourseResponse> Update(Course course);
         Task<IResult> Delete(Course course);
-        Task<CreatedCourseResponse> GetAsync(Guid Id);
+        Task<CreatedCourseResponse> GetAsync(int Id);
         Task<CreatedCourseResponse> Add(CreateCourseRequest createCourseRequest);
 
     }

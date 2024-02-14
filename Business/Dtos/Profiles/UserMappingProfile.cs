@@ -6,8 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
-using Business.Dtos.Responses;
 using Core.DataAccess.Paging;
+using Business.Dtos.Responses.Users;
+using Business.Dtos.Requests.Users;
 
 namespace Business.Dtos.Profiles
 {

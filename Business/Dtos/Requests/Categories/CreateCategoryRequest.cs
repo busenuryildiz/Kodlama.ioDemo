@@ -5,12 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Business.Dtos.Responses
+namespace Business.Dtos.Requests.Categories
 {
-    public class CreatedCategoryResponse
+    public class CreateCategoryRequest
     {
-        public Guid Id { get; set; }
         public string Name { get; set; }
-        public List<Course> Courses { get; set; }
     }
 }

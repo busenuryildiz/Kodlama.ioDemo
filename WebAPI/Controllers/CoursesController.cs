@@ -1,5 +1,5 @@
 ﻿using Business.Abstracts;
-using Business.Dtos.Requests;
+using Business.Dtos.Requests.Courses;
 using Entities.Concretes;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
@@ -34,7 +34,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet("Get")]
-        public async Task<IActionResult> Get(Guid id)
+        public async Task<IActionResult> Get(int id)
         {
             var result = await _courseService.GetAsync(id);
             return Ok(result);

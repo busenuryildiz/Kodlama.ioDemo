@@ -1,5 +1,5 @@
 ﻿using Business.Abstracts;
-using Business.Dtos.Requests;
+using Business.Dtos.Requests.Categories;
 using Entities.Concretes;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -33,7 +33,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet("Get")]
-        public async Task<IActionResult> Get(Guid id)
+        public async Task<IActionResult> Get(int id)
         {
             var result = await _categoryService.GetAsync(id);
             return Ok(result);

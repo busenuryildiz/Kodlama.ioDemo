@@ -1,5 +1,4 @@
-﻿using Core.DataAccess.EntityFramework;
-using DataAccess.Abstracts;
+﻿using DataAccess.Abstracts;
 using DataAccess.Contexts;
 using Entities.Concretes;
 using System;
@@ -12,7 +11,7 @@ using Core.DataAccess.Repositories;
 
 namespace DataAccess.Concretes.EntityFramework
 {
-    public class EfCourseDal : EfRepositoryBase<Course, Guid, CourseAcademyContext>, ICourseDal
+    public class EfCourseDal : EfRepositoryBase<Course, int, CourseAcademyContext>, ICourseDal
     {
         CourseAcademyContext _context;
 

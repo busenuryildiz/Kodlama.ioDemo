@@ -7,11 +7,11 @@ using AutoMapper;
 using Business.Abstracts;
 using Business.Constants;
 using Business.Dtos.Requests;
-using Business.Dtos.Responses;
+using Business.Dtos.Requests.Users;
+using Business.Dtos.Responses.Users;
 using Core.DataAccess.Paging;
 using Core.Utilities.Results;
 using DataAccess.Abstracts;
-using DataAccess.Concretes.EntityFramework;
 using Entities.Concretes;
 
 namespace Business.Concretes
